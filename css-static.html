@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<title>Ashiva Logo (CSS Static)</title>
+
+<style>
+:root {
+  --logo-dimension: 96vmin;
+  --bar-width: 8vmin;
+  --av-angle: rotate(25deg);
+  --av-angle-reversed: rotate(-25deg);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.ashivaLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: var(--logo-dimension);
+  height: var(--logo-dimension);
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+}
+
+.ashivaLogo::before {
+  content: \'\';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--logo-dimension);
+  height: var(--logo-dimension);
+  background-color: rgba(255, 255, 255, 0.3);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  transform: rotate(-28deg);
+}
+
+.ashivaLogo::after {
+  content: \'\';
+  flex: 0 0 60%;
+  height: var(--bar-width);
+  background-color: rgb(255, 255, 255);
+}
+
+.aframe,
+.vframe {
+  position: absolute;
+  width: var(--bar-width);
+  height: 200%;
+  background-color: rgb(255, 255, 255);
+}
+
+.aframe {
+  top: 0;
+}
+
+.vframe {
+  bottom: 0;
+}
+
+.aframe-left,
+.vframe-left {
+  left: 40%;
+}
+
+.aframe-right,
+.vframe-right {
+  right: 40%;
+}
+
+.aframe-left,
+.vframe-right {
+  transform: var(--av-angle-reversed);
+}
+
+.aframe-right,
+.vframe-left {
+  transform: var(--av-angle);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="ashivaLogo">
+<div class="aframe aframe-left"></div>
+<div class="aframe aframe-right"></div>
+<div class="vframe vframe-left"></div>
+<div class="vframe vframe-right"></div>
+</div>
+
+</body>
+</html>
+
+?>
