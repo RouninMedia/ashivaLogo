@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1200 1200">
+
+<defs>
+
+<clipPath id="circle-edge">  
+<circle cx="600" cy="600" r="601" />  
+</clipPath>
+
+<style><![CDATA[
+
+circle {
+  fill: rgb(255, 0, 0);
+}
+
+rect {
+  width: 1200px;
+  height: 600px;
+  fill: rgba(255, 255, 255, 0.3);
+  clip-path: url(#circle-edge);
+}
+
+line {
+  stroke: rgb(255, 255, 255);
+  stroke-width: 100;
+  clip-path: url(#circle-edge);
+}
+
+]]></style>
+
+</defs>
+
+<g>
+<circle cx="600" cy="600" r="600" />
+<rect x="0" y="0" transform="rotate(-28, 600, 600)" />
+<line x1="535" x2="535" y1="0" y2="1200" transform="rotate(25, 580, 0) translate(0, -2)" />
+<line x1="665" x2="665" y1="0" y2="1200" transform="rotate(-25, 620, 0) translate(0, -2)" />
+<line x1="535" x2="535" y1="0" y2="1200" transform="rotate(-25, 580, 1200) translate(0, 2)" />
+<line x1="665" x2="665" y1="0" y2="1200" transform="rotate(25, 620, 1200) translate(0, 2)" />
+<line x1="300" x2="900" y1="600" y2="600" />
+</g>
+</svg>
