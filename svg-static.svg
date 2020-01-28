@@ -5,10 +5,15 @@
 <defs>
 
 <clipPath id="circle-edge">  
-<circle cx="600" cy="600" r="601" />  
+<circle cx="600" cy="600" r="600" />  
 </clipPath>
 
+
 <style><![CDATA[
+
+g {
+  clip-path: url(#circle-edge);
+}
 
 circle {
   fill: rgb(255, 0, 0);
@@ -18,13 +23,11 @@ rect {
   width: 1200px;
   height: 600px;
   fill: rgba(255, 255, 255, 0.3);
-  clip-path: url(#circle-edge);
 }
 
 line {
   stroke: rgb(255, 255, 255);
   stroke-width: 100;
-  clip-path: url(#circle-edge);
 }
 
 ]]></style>
@@ -40,4 +43,5 @@ line {
 <line x1="665" x2="665" y1="0" y2="1200" transform="rotate(25, 620, 1200) translate(0, 2)" />
 <line x1="300" x2="900" y1="600" y2="600" />
 </g>
+
 </svg>
