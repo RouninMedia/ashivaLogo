@@ -1,0 +1,192 @@
+<html>
+<head>
+<title>Ashiva Logo (CSS Animated)</title>
+
+<style>
+:root {
+  --logo-dimension: 96vmin;
+  --bar-width: 8vmin;
+  --av-angle: rotate(25deg);
+  --av-angle-reversed: rotate(-25deg);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.ashivaLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: var(--logo-dimension);
+  height: var(--logo-dimension);
+  background-image: linear-gradient(to right, rgb(255, 77, 77) 50%, rgb(255, 0, 0) 50%);
+  border-radius: 50%;
+  animation: ashivaLogo 2s linear forwards;
+}
+
+.ashivaLogo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--logo-dimension);
+  height: var(--logo-dimension);
+  background-color: rgba(255, 255, 255, 0.3);
+  clip-path: polygon(50.25% 0, 100% 0, 100% 100%, 50.25% 100%);
+  animation: ashivaLogoAfter 2s linear 2s forwards;
+}
+
+
+.lattice {
+  position: absolute;
+  top: calc((100% - var(--logo-dimension)) / 2);
+  left: calc((100% - var(--logo-dimension)) / 2);
+  width: var(--logo-dimension);
+  height: var(--logo-dimension);
+  border-radius: 50%;
+}
+
+.lattice::before,
+.lattice::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - (var(--bar-width) / 2));
+  z-index: 12;
+  width: 65%;
+  height: var(--bar-width);
+  background-color: rgba(255, 255, 255, 0);
+  transform: rotate(-65deg);
+  animation: latticeLock 1.2s linear 4.4s forwards;
+}
+
+.lattice::before {
+  left: -11.7%;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.lattice::after {
+  right: -11.7%;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.aframe,
+.vframe {
+  position: absolute;
+  width: var(--bar-width);
+  height: 200%;
+  background-color: rgb(255, 255, 255);
+}
+
+.aframe {
+  bottom: 0;
+  transform: translateY(100%);
+}
+
+.vframe {
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.aframe-left,
+.vframe-left {
+  left: 40%;
+}
+
+.aframe-right,
+.vframe-right {
+  right: 40%;
+}
+
+.aframe-left {
+  animation: aframeLeft 4s linear 2.8s forwards;
+}
+
+.aframe-right {
+  animation: aframeRight 4s linear 2.8s forwards;
+}
+
+.vframe-right {
+  animation: vframeRight 4s linear 2.8s forwards;
+}
+
+.vframe-left {
+  animation: vframeLeft 4s linear 2.8s forwards;
+}
+
+
+@keyframes ashivaLogo {
+    0% {transform: scale(0) rotate(0);}
+   80% {transform: scale(1) rotate(0);}
+  100% {transform: scale(1) rotate(63deg);}
+}
+
+@keyframes ashivaLogoAfter {
+
+  100% {transform: translateY(200%);}
+}
+
+@keyframes aframeLeft {
+
+  19.9% {transform: translateY(100%) rotate(0);}
+  20% {transform: translateY(0) rotate(0);}
+  30% {transform: translateY(0) var(--av-angle);}
+ 100% {transform: translateY(0) var(--av-angle);}
+}
+
+@keyframes vframeLeft {
+
+  19.9% {transform: translateY(-50%) rotate(0);}
+  20% {transform: translateY(0) rotate(0);}
+  30% {transform: translateY(0) rotate(0);}
+  40% {transform: translateY(0) var(--av-angle-reversed);}
+ 100% {transform: translateY(0) var(--av-angle-reversed);}
+}
+
+@keyframes aframeRight {
+
+  19.9% {transform: translateY(50%) rotate(0);}
+  20% {transform: translateY(0) rotate(0);}
+  30% {transform: translateY(0) var(--av-angle-reversed);}
+ 100% {transform: translateY(0) var(--av-angle-reversed);}
+}
+
+@keyframes vframeRight {
+
+  19.9% {transform: translateY(-100%) rotate(0);}
+  20% {transform: translateY(0) rotate(0);}
+  30% {transform: translateY(0) rotate(0);}
+  40% {transform: translateY(0) var(--av-angle);}
+ 100% {transform: translateY(0) var(--av-angle);}
+}
+
+@keyframes latticeLock {
+ 
+ 0.1% {transform: rotate(-65deg); background-color: rgba(255, 255, 255, 1);}
+ 50%, 100% {transform: rotate(0); background-color: rgba(255, 255, 255, 1);}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="ashivaLogo"></div>
+
+<div class="lattice">
+<div class="aframe aframe-left"></div>
+<div class="aframe aframe-right"></div>
+<div class="vframe vframe-left"></div>
+<div class="vframe vframe-right"></div>
+</div>
+
+</body>
+</html>
