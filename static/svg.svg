@@ -2,6 +2,8 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      viewBox="0 0 1200 1200">
 
+<title>Ashiva Logo (SVG Static)</title>
+
 <defs>
 
 <clipPath id="circle-edge">  
@@ -10,6 +12,10 @@
 
 
 <style><![CDATA[
+
+svg {
+  transform: scale(0.96);
+}
 
 g {
   clip-path: url(#circle-edge);
