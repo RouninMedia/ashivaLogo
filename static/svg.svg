@@ -1,11 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
+     lang="en-GB"
      viewBox="0 0 1200 1200">
 
 <title>Ashiva Logo (SVG Static)</title>
 
 <defs>
-
+     
 <clipPath id="circle-edge">  
 <circle cx="600" cy="600" r="600" />  
 </clipPath>
