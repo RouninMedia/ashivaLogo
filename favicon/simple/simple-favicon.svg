@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     lang="en-GB"
+     viewBox="0 0 1200 1200">
+
+<title>Ashiva Simple Favicon</title>
+
+<defs>
+
+<clipPath id="square-edge">  
+<rect x="0" y="0" width="1200" height="1200" />  
+</clipPath>
+
+<clipPath id="circle-edge">  
+<circle cx="600" cy="600" r="640" />  
+</clipPath>
+
+
+<style><![CDATA[
+
+.square {
+  clip-path: url(#square-edge);
+}
+
+.upperLeft {
+  width: 1200px;
+  height: 1200px;
+  fill: rgb(154, 0, 0);
+}
+
+.lowerRight {
+  width : 1700px;
+  height: 1700px;
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+.pattern {
+  transform: scale(0.8) translate(140px, 140px);
+  clip-path: url(#circle-edge);
+}
+
+line {
+  stroke: rgb(255, 255, 255);
+  stroke-width: 100;
+}
+
+circle {
+  stroke: rgb(255, 255, 255);
+  stroke-width: 72;
+  fill: none;
+}
+
+]]></style>
+
+</defs>
+
+<g class="square">
+<rect class="upperLeft" x="0" y="0" />
+<rect class="lowerRight" x="0" y="0" transform="rotate(45, 0, 0), translate(849, -849)" />
+</g>
+
+<g class="pattern">
+<line x1="535" x2="535" y1="0" y2="1200" transform="rotate(25, 580, 0) translate(0, -2)" />
+<line x1="665" x2="665" y1="0" y2="1200" transform="rotate(-25, 620, 0) translate(0, -2)" />
+<line x1="535" x2="535" y1="0" y2="1200" transform="rotate(-25, 580, 1200) translate(0, 2)" />
+<line x1="665" x2="665" y1="0" y2="1200" transform="rotate(25, 620, 1200) translate(0, 2)" />
+<line x1="300" x2="900" y1="600" y2="600" />
+</g>
+
+<circle cx="600" cy="600" r="510" />
+
+</svg>
