@@ -55,7 +55,7 @@ circle {
 <rect class="lowerRight" x="0" y="0" transform="rotate(45, 0, 0), translate(849, -849)" />
 </g>
 
-<text x="328" y="840">A</text>
+<text x="328" y="830">A</text>
 
 <circle cx="600" cy="600" r="510" />
 
