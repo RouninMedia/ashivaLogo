@@ -3,6 +3,7 @@
 <title>Ashiva Logo (CSS Animated)</title>
 
 <style>
+
 :root {
   --logo-dimension: 96vmin;
   --bar-width: 8vmin;
@@ -17,6 +18,8 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  color: rgb(255, 255, 255);
+  background-color: rgb(191, 0, 0);
   overflow: hidden;
 }
 
@@ -29,6 +32,7 @@ body {
   height: var(--logo-dimension);
   background-image: linear-gradient(to right, rgb(255, 77, 77) 50%, rgb(255, 0, 0) 50%);
   border-radius: 50%;
+  overflow: hidden;
   animation: ashivaLogo 2s linear forwards;
 }
 
@@ -52,6 +56,7 @@ body {
   width: var(--logo-dimension);
   height: var(--logo-dimension);
   border-radius: 50%;
+  overflow: hidden;
 }
 
 .lattice::before,
@@ -92,7 +97,7 @@ body {
 }
 
 .vframe {
-  top: 0;
+  top: -1px;
   transform: translateY(-100%);
 }
 
